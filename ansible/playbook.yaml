@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+    - name: Run container
+      docker_container:
+        name: bms-prod
+        image: bookmyshow-app
+        state: started
+        ports:
+          - "80:5000"
